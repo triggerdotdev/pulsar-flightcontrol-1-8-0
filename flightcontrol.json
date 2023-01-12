@@ -1,0 +1,48 @@
+{
+  "$schema": "https://app.flightcontrol.dev/schema.json",
+  "environments": [
+    {
+      "id": "demo",
+      "name": "Demo",
+      "region": "us-east-1",
+      "source": {
+        "branch": "main",
+        "trigger": "manual"
+      },
+      "envVariables": {
+        "PULSAR_ISSUER_URL": "https://auth.streamnative.cloud/"
+      },
+      "services": [
+        {
+          "id": "d-node",
+          "name": "Demo Pulsar Node Client 1.8.0 on Alpine",
+          "type": "fargate-worker",
+          "buildType": "docker",
+          "dockerfilePath": "./Dockerfile.alpine",
+          "dockerContext": ".",
+          "cpu": 1,
+          "memory": 2,
+          "minInstances": 1,
+          "maxInstances": 1,
+          "watchPaths": [
+            "./**"
+          ],
+          "envVariables": {
+            "PULSAR_CLIENT_ID": {
+              "fromParameterStore": "demo.node.pulsar.client_id"
+            },
+            "PULSAR_CLIENT_SECRET": {
+              "fromParameterStore": "demo.node.pulsar.client_secret"
+            },
+            "PULSAR_AUDIENCE": {
+              "fromParameterStore": "demo.node.pulsar.audience"
+            },
+            "PULSAR_SERVICE_URL": {
+              "fromParameterStore": "demo.node.pulsar.service_url"
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

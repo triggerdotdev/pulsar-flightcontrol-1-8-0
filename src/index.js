@@ -1,7 +1,4 @@
 const Pulsar = require("pulsar-client");
-const SegfaultHandler = require("segfault-handler");
-
-SegfaultHandler.registerHandler("crash.log");
 
 (async () => {
   Pulsar.Client.setLogHandler((level, file, line, message) => {
