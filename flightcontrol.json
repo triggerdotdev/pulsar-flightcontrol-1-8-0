@@ -58,6 +58,36 @@
           "watchPaths": [
             "./**"
           ]
+        },
+        {
+          "id": "d-node-debian",
+          "name": "Demo Pulsar Node Client 1.8.0 on Debian",
+          "type": "fargate-worker",
+          "buildType": "docker",
+          "dockerfilePath": "./Dockerfile.debian",
+          "dockerContext": ".",
+          "cpu": 1,
+          "memory": 2,
+          "minInstances": 1,
+          "maxInstances": 1,
+          "watchPaths": [
+            "./**"
+          ]
+        },
+        {
+          "id": "d-node-debian-16",
+          "name": "Demo Pulsar Node Client 1.8.0 on Debian 16",
+          "type": "fargate-worker",
+          "buildType": "docker",
+          "dockerfilePath": "./Dockerfile.debian-16",
+          "dockerContext": ".",
+          "cpu": 1,
+          "memory": 2,
+          "minInstances": 1,
+          "maxInstances": 1,
+          "watchPaths": [
+            "./**"
+          ]
         }
       ]
     }
