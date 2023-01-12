@@ -10,7 +10,7 @@
         "trigger": "manual"
       },
       "envVariables": {
-        "PULSAR_ISSUER_URL": "https://auth.streamnative.cloud/",
+        "PULSAR_ISSUER_URL": "https://auth.streamnative.cloud",
         "DOCKER_USERNAME": "maverickdotdev",
         "DOCKER_PASSWORD": {
           "fromParameterStore": "DOCKER_HUB_PASSWORD"
