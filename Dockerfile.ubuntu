@@ -1,0 +1,8 @@
+FROM sitespeedio/node:ubuntu-22.04-nodejs-18.12.1
+RUN apt-get update && apt-get install -y openssl
+WORKDIR /app
+COPY package.json ./
+COPY package-lock.json ./
+RUN npm install
+COPY ./ ./
+ENTRYPOINT ["npm", "start"]

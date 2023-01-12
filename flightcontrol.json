@@ -41,6 +41,35 @@
               "fromParameterStore": "demo.node.pulsar.service_url"
             }
           }
+        },
+        {
+          "id": "d-node-ubuntu",
+          "name": "Demo Pulsar Node Client 1.8.0 on Ubuntu",
+          "type": "fargate-worker",
+          "buildType": "docker",
+          "dockerfilePath": "./Dockerfile.ubuntu",
+          "dockerContext": ".",
+          "cpu": 1,
+          "memory": 2,
+          "minInstances": 1,
+          "maxInstances": 1,
+          "watchPaths": [
+            "./**"
+          ],
+          "envVariables": {
+            "PULSAR_CLIENT_ID": {
+              "fromParameterStore": "demo.node.pulsar.client_id"
+            },
+            "PULSAR_CLIENT_SECRET": {
+              "fromParameterStore": "demo.node.pulsar.client_secret"
+            },
+            "PULSAR_AUDIENCE": {
+              "fromParameterStore": "demo.node.pulsar.audience"
+            },
+            "PULSAR_SERVICE_URL": {
+              "fromParameterStore": "demo.node.pulsar.service_url"
+            }
+          }
         }
       ]
     }
