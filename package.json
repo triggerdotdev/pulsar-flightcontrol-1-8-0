@@ -1,0 +1,19 @@
+{
+  "name": "pulsar-flightcontrol-1-8-0",
+  "version": "1.0.0",
+  "description": "Playground to get pulsar-client building and deploying using Docker and flightcontrol",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "node -r dotenv/config src/index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "pulsar-client": "1.8.0",
+    "segfault-handler": "^1.2.0"
+  },
+  "devDependencies": {
+    "dotenv": "16.0.3"
+  }
+}
