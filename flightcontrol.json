@@ -41,7 +41,10 @@
           "minInstances": 1,
           "maxInstances": 1,
           "watchPaths": [
-            "./**"
+            "./src/index.js",
+            "./package.json",
+            "./package-lock.json",
+            "./Dockerfile.alpine"
           ]
         },
         {
@@ -56,7 +59,10 @@
           "minInstances": 1,
           "maxInstances": 1,
           "watchPaths": [
-            "./**"
+            "./src/index.js",
+            "./package.json",
+            "./package-lock.json",
+            "./Dockerfile.ubuntu"
           ]
         },
         {
@@ -71,7 +77,10 @@
           "minInstances": 1,
           "maxInstances": 1,
           "watchPaths": [
-            "./**"
+            "./src/index.js",
+            "./package.json",
+            "./package-lock.json",
+            "./Dockerfile.debian"
           ]
         },
         {
@@ -86,7 +95,10 @@
           "minInstances": 1,
           "maxInstances": 1,
           "watchPaths": [
-            "./**"
+            "./src/index.js",
+            "./package.json",
+            "./package-lock.json",
+            "./Dockerfile.debian-16"
           ]
         }
       ]
