@@ -1,5 +1,5 @@
 FROM sitespeedio/node:ubuntu-22.04-nodejs-18.12.1
-RUN apt-get update && apt-get install -y openssl
+RUN apt-get update && apt-get install -y openssl ca-certificates
 WORKDIR /app
 COPY package.json ./
 COPY package-lock.json ./
