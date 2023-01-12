@@ -30,24 +30,6 @@
       },
       "services": [
         {
-          "id": "d-node-ubuntu",
-          "name": "Demo Pulsar Node Client 1.8.0 on Ubuntu",
-          "type": "fargate-worker",
-          "buildType": "docker",
-          "dockerfilePath": "./Dockerfile.ubuntu",
-          "dockerContext": ".",
-          "cpu": 1,
-          "memory": 2,
-          "minInstances": 1,
-          "maxInstances": 1,
-          "watchPaths": [
-            "./src/index.js",
-            "./package.json",
-            "./package-lock.json",
-            "./Dockerfile.ubuntu"
-          ]
-        },
-        {
           "id": "d-node-debian",
           "name": "Demo Pulsar Node Client 1.8.0 on Debian",
           "type": "fargate-worker",
