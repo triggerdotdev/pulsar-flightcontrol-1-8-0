@@ -30,24 +30,6 @@
       },
       "services": [
         {
-          "id": "d-node",
-          "name": "Demo Pulsar Node Client 1.8.0 on Alpine",
-          "type": "fargate-worker",
-          "buildType": "docker",
-          "dockerfilePath": "./Dockerfile.alpine",
-          "dockerContext": ".",
-          "cpu": 1,
-          "memory": 2,
-          "minInstances": 1,
-          "maxInstances": 1,
-          "watchPaths": [
-            "./src/index.js",
-            "./package.json",
-            "./package-lock.json",
-            "./Dockerfile.alpine"
-          ]
-        },
-        {
           "id": "d-node-ubuntu",
           "name": "Demo Pulsar Node Client 1.8.0 on Ubuntu",
           "type": "fargate-worker",
