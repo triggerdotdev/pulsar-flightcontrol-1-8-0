@@ -19,7 +19,7 @@ const Pulsar = require("pulsar-client");
   const client = new Pulsar.Client({
     serviceUrl: process.env.PULSAR_SERVICE_URL,
     authentication: auth,
-    tlsTrustCertsFilePath: "../ca-certificates.crt",
+    tlsAllowInsecureConnection: true,
   });
 
   console.log("Client created");
